@@ -7,7 +7,6 @@
 #include <vector>
 #include <algorithm>
 #include <cmath>
-#include "irisapi/Exceptions.h"
 
 
 class WaterfallData
@@ -35,7 +34,7 @@ public:
   void appendData(double* data, int n)
   {
     if(n != nData_)
-      throw iris::InvalidDataException("WaterfallData: invalid data length");
+      return;
 
     VecPtr v = data_.front();
     v->assign(data, data+n);
