@@ -1,4 +1,4 @@
-#include "libsdrgui/plot/Scatterplot.h"
+#include "srsgui/plot/Scatterplot.h"
 #include "ScatterplotWrapper.h"
 
 Scatterplot::Scatterplot()

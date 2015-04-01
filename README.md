@@ -1,9 +1,9 @@
-libSDRGUI
+srsGUI
 ========
 
-libSDRGUI is a free and open-source graphics library for SDR using Qt and Qwt. The library provides a number of useful plots for graphing real and complex numbers. Each plot is designed to be frequently updated with new data.
+srsGUI is a free and open-source graphics library for SDR using Qt and Qwt. The library provides a number of useful plots for graphing real and complex numbers. Each plot is designed to be frequently updated with new data.
 
-libSDRGUI is provided under the LGPLv3 license.
+srsGUI is provided under the LGPLv3 license.
 
 Current Features: 
  * Real plot - simple line plot.
@@ -20,10 +20,10 @@ To install Boost, QT4 and Qwt6, use your distribution packet management system.
 For instance in ubuntu you can run: ```sudo apt-get install libboost-system-dev libboost-test-dev libboost-thread-dev libqwt-dev libqt4-dev```
 
 
-Finally, to download and build libSDRGUI, just run: 
+Finally, to download and build srsGUI, just run: 
 ```
-git clone https://github.com/suttonpd/libSDRGUI.git
-cd libSDRGUI
+git clone https://github.com/suttonpd/srsgui.git
+cd srsgui
 mkdir build
 cd build
 cmake ../
@@ -32,7 +32,7 @@ make
 
 The library can also be installed using the command ```sudo make install```. 
 
-Running libSDRGUI Examples
+Running srsGUI Examples
 ========================
 
 The library includes a number of tests which illustrate use of both C and C++ interfaces. These can be found in the test folder. After building the library, these tests can be executed using ```make test```

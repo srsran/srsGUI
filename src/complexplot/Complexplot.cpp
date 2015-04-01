@@ -1,4 +1,4 @@
-#include "libsdrgui/plot/Complexplot.h"
+#include "srsgui/plot/Complexplot.h"
 #include "ComplexplotWrapper.h"
 
 using namespace std;

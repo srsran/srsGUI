@@ -1,7 +1,7 @@
 ########################################################################
 # Install headers
 ########################################################################
-INSTALL(DIRECTORY libsdrgui
+INSTALL(DIRECTORY srsgui
         DESTINATION "${INCLUDE_DIR}"
         FILES_MATCHING PATTERN "*.h"
         PATTERN ".svn" EXCLUDE
@@ -18,4 +18,4 @@ FOREACH (_header ${headers})
                 LIST(APPEND HEADERS_ALL ${tmp})
         ENDIF(IS_DIRECTORY ${_header})
 ENDFOREACH()
-ADD_CUSTOM_TARGET (add_libsdrgui_headers SOURCES ${HEADERS_ALL})
+ADD_CUSTOM_TARGET (add_srsgui_headers SOURCES ${HEADERS_ALL})

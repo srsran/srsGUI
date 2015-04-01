@@ -1,5 +1,5 @@
-#include "libsdrgui/plot/plot_real.h"
-#include "libsdrgui/plot/Realplot.h"
+#include "srsgui/plot/plot_real.h"
+#include "srsgui/plot/Realplot.h"
 #include <complex.h>
 
 

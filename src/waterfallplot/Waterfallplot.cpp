@@ -1,4 +1,4 @@
-#include "libsdrgui/plot/Waterfallplot.h"
+#include "srsgui/plot/Waterfallplot.h"
 #include "WaterfallplotWrapper.h"
 
 using namespace std;

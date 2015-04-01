@@ -1,6 +1,6 @@
 #define BOOST_TEST_MODULE Realplot_Test
 
-#include "libsdrgui/libsdrgui++.h"
+#include "srsgui/srsgui++.h"
 
 #include <boost/scoped_ptr.hpp>
 #include <boost/thread/thread.hpp>

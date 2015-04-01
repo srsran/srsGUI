@@ -7,7 +7,7 @@
 #include <qwt_plot_layout.h>
 #include <qwt_plot_renderer.h>
 #include <qwt_matrix_raster_data.h>
-#include "libsdrgui/common/Spectrogramplot.h"
+#include "srsgui/common/Spectrogramplot.h"
 
 class MyZoomer: public QwtPlotZoomer
 {

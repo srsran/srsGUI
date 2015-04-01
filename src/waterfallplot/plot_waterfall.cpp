@@ -1,5 +1,5 @@
-#include "libsdrgui/plot/plot_waterfall.h"
-#include "libsdrgui/plot/Waterfallplot.h"
+#include "srsgui/plot/plot_waterfall.h"
+#include "srsgui/plot/Waterfallplot.h"
 #include <complex.h>
 
 

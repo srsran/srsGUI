@@ -1,6 +1,6 @@
 #include "ScatterWidget.h"
-#include "libsdrgui/common/Pointplot.h"
-#include "libsdrgui/common/Events.h"
+#include "srsgui/common/Pointplot.h"
+#include "srsgui/common/Events.h"
 
 #include <qlayout.h>
 #include <algorithm>

@@ -1,6 +1,6 @@
 #include "WaterfallplotWrapper.h"
 #include "WaterfallWidget.h"
-#include "libsdrgui/common/Events.h"
+#include "srsgui/common/Events.h"
 #include <qapplication.h>
 #include <QThread>
 #include <QGridLayout>

@@ -1,5 +1,5 @@
-#include "libsdrgui/plot/plot_complex.h"
-#include "libsdrgui/plot/Complexplot.h"
+#include "srsgui/plot/plot_complex.h"
+#include "srsgui/plot/Complexplot.h"
 #include <complex>
 
 

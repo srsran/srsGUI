@@ -1,7 +1,7 @@
 #include "WaterfallWidget.h"
-#include "libsdrgui/common/Spectrogramplot.h"
-#include "libsdrgui/common/Lineplot.h"
-#include "libsdrgui/common/Events.h"
+#include "srsgui/common/Spectrogramplot.h"
+#include "srsgui/common/Lineplot.h"
+#include "srsgui/common/Events.h"
 
 #include <qlayout.h>
 #include <qpushbutton.h>

@@ -1,4 +1,4 @@
-#include "libsdrgui/plot/Realplot.h"
+#include "srsgui/plot/Realplot.h"
 #include "RealplotWrapper.h"
 
 Realplot::Realplot()

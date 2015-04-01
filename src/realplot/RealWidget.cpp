@@ -1,6 +1,6 @@
 #include "RealWidget.h"
-#include "libsdrgui/common/Lineplot.h"
-#include "libsdrgui/common/Events.h"
+#include "srsgui/common/Lineplot.h"
+#include "srsgui/common/Events.h"
 
 #include <qlayout.h>
 #include <algorithm>

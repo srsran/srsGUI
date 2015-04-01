@@ -1,4 +1,4 @@
-#include "libsdrgui/common/Events.h"
+#include "srsgui/common/Events.h"
 
 using namespace std;
 

@@ -1,4 +1,4 @@
-#include "libsdrgui/common/Pointplot.h"
+#include "srsgui/common/Pointplot.h"
 #include <algorithm>
 
 using namespace std;

@@ -1,4 +1,4 @@
-#include "libsdrgui/common/Lineplot.h"
+#include "srsgui/common/Lineplot.h"
 #include <algorithm>
 
 class MyZoomer: public QwtPlotZoomer

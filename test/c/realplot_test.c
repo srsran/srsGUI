@@ -1,4 +1,4 @@
-#include "libsdrgui/libsdrgui.h"
+#include "srsgui/srsgui.h"
 #include <unistd.h>
 #include <math.h>
 #include <stdlib.h>

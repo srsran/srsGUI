@@ -1,5 +1,5 @@
-#include "libsdrgui/plot/plot_scatter.h"
-#include "libsdrgui/plot/Scatterplot.h"
+#include "srsgui/plot/plot_scatter.h"
+#include "srsgui/plot/Scatterplot.h"
 #include <complex>
 
 
