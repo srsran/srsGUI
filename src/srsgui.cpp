@@ -1,4 +1,4 @@
-#include "libsdrgui/libsdrgui.h"
+#include "srsgui/srsgui.h"
 #include <stdio.h>
 #include <QApplication>
 #include <QMainWindow>
