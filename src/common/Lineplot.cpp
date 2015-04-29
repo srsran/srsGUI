@@ -4,8 +4,8 @@
 class MyZoomer: public QwtPlotZoomer
 {
 public:
-    MyZoomer(QwtPlotCanvas *canvas):
-        QwtPlotZoomer(canvas)
+    MyZoomer(QWidget *canvas):
+        QwtPlotZoomer(canvas, true)
     {
         setTrackerMode(AlwaysOn);
     }
@@ -126,5 +126,5 @@ void Lineplot::resetZoom()
 
 void Lineplot::linkScales()
 {
-  setAxisScaleDiv(QwtPlot::yRight, *axisScaleDiv(QwtPlot::yLeft));
+  setAxisScaleDiv(QwtPlot::yRight, axisScaleDiv(QwtPlot::yLeft));
 }

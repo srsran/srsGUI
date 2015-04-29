@@ -12,8 +12,8 @@
 class MyZoomer: public QwtPlotZoomer
 {
 public:
-    MyZoomer(QwtPlotCanvas *canvas):
-        QwtPlotZoomer(canvas)
+    MyZoomer(QWidget *canvas):
+        QwtPlotZoomer(canvas, true)
     {
         setTrackerMode(AlwaysOn);
     }
