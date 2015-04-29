@@ -12,7 +12,7 @@
 class MyZoomer: public QwtPlotZoomer
 {
 public:
-    MyZoomer(QWidget *canvas):
+    MyZoomer(QwtPlotCanvas *canvas):
         QwtPlotZoomer(canvas, true)
     {
         setTrackerMode(AlwaysOn);
@@ -81,7 +81,7 @@ Spectrogramplot::Spectrogramplot(int numDataPoints, int numRows, QWidget *parent
   // RightButton: zoom out by 1
   // Ctrl+RighButton: zoom out to full size
 
-  zoomer_ = new MyZoomer(canvas());
+  zoomer_ = new MyZoomer(qobject_cast<QwtPlotCanvas*>(canvas()));
   zoomer_->setMousePattern(QwtEventPattern::MouseSelect1,
       Qt::LeftButton);
   zoomer_->setMousePattern(QwtEventPattern::MouseSelect2,
