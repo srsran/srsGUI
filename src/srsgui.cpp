@@ -16,7 +16,8 @@ void *qt_thread(void *arg)
 	pthread_exit(NULL);
 }
 
-int sdrgui_init() {
+int sdrgui_init()
+{
   if (!sdrgui_initiated)
   {
 		/** FIXME: Set attributes to detachable */
@@ -31,7 +32,8 @@ int sdrgui_init() {
 	return 0;
 }
 
-void sdrgui_exit() {
+void sdrgui_exit()
+{
   if(sdrgui_initiated)
   {
     usleep(100000);
