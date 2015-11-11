@@ -1,4 +1,3 @@
-#
 # Copyright 2012-2013 The srsGUI Project Developers. See the
 # COPYRIGHT file at the top-level directory of this distribution.
 #
