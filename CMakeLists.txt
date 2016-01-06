@@ -37,8 +37,20 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/include)
 ########################################################################
 # Install Dirs
 ########################################################################
+if (NOT CMAKE_INSTALL_LIBDIR)
+  include(GNUInstallDirs)
+endif (NOT CMAKE_INSTALL_LIBDIR)
+  
+# Fall back to just "lib" if the item provided by GNUInstallDirs doesn't exist
+# For example, on Ubuntu 13.10 with CMake 2.8.11.2,
+# /usr/lib/${CMAKE_LIBRARY_ARCHITECTURE} doesn't exist.
+if (NOT EXISTS "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR}")
+  message(STATUS "${CMAKE_INSTALL_PREFIX}/${CMAKE_INSTALL_LIBDIR} does not exist. Defaulting install location to ${CMAKE_INSTALL_PREFIX}/lib.")
+  set(CMAKE_INSTALL_LIBDIR lib)
+endif()
+
 SET(RUNTIME_DIR bin)
-SET(LIBRARY_DIR lib)
+SET(LIBRARY_DIR ${CMAKE_INSTALL_LIBDIR})
 SET(INCLUDE_DIR include)
 
 ########################################################################

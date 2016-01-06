@@ -41,6 +41,7 @@ FIND_PATH(QWT_INCLUDE_DIR qwt.h
   /usr/include/qwt
   /usr/include/qwt-qt4
   /usr/include/qwt5
+  /usr/include/qwt6
   /usr/include
   /opt/local/include/qwt #macports path
   $ENV{QWT_DIR}/include
