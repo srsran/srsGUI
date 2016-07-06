@@ -10,18 +10,24 @@ static int sdrgui_initiated=0;
 void *qt_thread(void *arg)
 {
 	int argc = 1;
-	char* argv[] = { const_cast<char *>("libLTE Visualizer"), NULL };
+	char* argv[] = { const_cast<char *>((char*) arg), NULL };
   QApplication app(argc, argv);
 	app.exec();
 	pthread_exit(NULL);
 }
 
-int sdrgui_init()
-{
+int sdrgui_init() {
+  return sdrgui_init_title("Software Radio Systems, Ltd");
+}
+
+int sdrgui_init_title(const char *window_title) {
+  if (!window_title) {
+    window_title="Software Radio Systems, Ltd";
+  }
   if (!sdrgui_initiated)
   {
 		/** FIXME: Set attributes to detachable */
-    if (pthread_create(&thread, NULL, qt_thread, NULL))
+    if (pthread_create(&thread, NULL, qt_thread, (void*) window_title))
     {
 			perror("phtread_create");
 			return -1;

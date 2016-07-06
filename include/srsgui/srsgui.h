@@ -11,6 +11,7 @@ extern "C" {
 #include "srsgui/plot/plot_waterfall.h"
 
 int  sdrgui_init();
+int  sdrgui_init_title(const char *window_title);
 void sdrgui_exit();
 
 #ifdef __cplusplus

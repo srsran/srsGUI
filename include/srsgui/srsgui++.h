@@ -7,6 +7,7 @@
 #include "srsgui/plot/Waterfallplot.h"
 
 int  sdrgui_init();
+int  sdrgui_init_title(const char *window_title);
 void sdrgui_exit();
 
 #endif
