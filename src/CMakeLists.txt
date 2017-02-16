@@ -42,10 +42,11 @@ IF(QT4_FOUND AND QWT_FOUND AND QWT_MAJOR_VERSION EQUAL 6)
   QT4_WRAP_CPP(real realplot/RealWidget.h realplot/RealplotWrapper.h)
   QT4_WRAP_CPP(scatter scatterplot/ScatterWidget.h scatterplot/ScatterplotWrapper.h)
   QT4_WRAP_CPP(waterfall waterfallplot/WaterfallWidget.h waterfallplot/WaterfallplotWrapper.h)
+  QT4_WRAP_CPP(textedit textedit/TextEditWidget.h textedit/TextEditWrapper.h ../include/srsgui/plot/text_edit.h)
 
-  INCLUDE_DIRECTORIES(common complexplot realplot scatterplot waterfallplot ${Boost_INCLUDE_DIRS}) 
+  INCLUDE_DIRECTORIES(common complexplot realplot scatterplot waterfallplot textedit ${Boost_INCLUDE_DIRS})
   
-  ADD_LIBRARY(srsgui SHARED ${eventwraps} ${lineplotwraps} ${pointplotwraps} ${spectrogramplotwraps} ${complex} ${real} ${scatter} ${waterfall} ${SOURCES_ALL} )
+  ADD_LIBRARY(srsgui SHARED ${eventwraps} ${lineplotwraps} ${pointplotwraps} ${spectrogramplotwraps} ${complex} ${real} ${scatter} ${waterfall} ${textedit} ${SOURCES_ALL} )
   TARGET_LINK_LIBRARIES(srsgui pthread ${QT_LIBRARIES} ${QWT_LIBRARIES})
   INSTALL(TARGETS srsgui DESTINATION ${LIBRARY_DIR})
   SG_SET_PIC(srsgui)
