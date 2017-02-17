@@ -27,6 +27,10 @@ TextEditWidget::TextEditWidget(QWidget *parent)
   QFont font("Sant Serif", 14, QFont::Bold);
   label->setFont(font);
   label->setAlignment(Qt::AlignHCenter);
+
+  font.setPointSize(12);
+  font.setBold(false);
+  widget->setFont(font);
 }
 
 TextEditWidget::~TextEditWidget()
