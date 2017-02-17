@@ -10,6 +10,7 @@ extern "C" {
 #include "srsgui/plot/plot_complex.h"
 #include "srsgui/plot/plot_waterfall.h"
 #include "srsgui/plot/text_edit.h"
+#include "srsgui/plot/key_value.h"
 
 int  sdrgui_init();
 int  sdrgui_init_title(const char *window_title);
