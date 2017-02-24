@@ -32,7 +32,7 @@ Pointplot::Pointplot(QWidget *parent)
   imagPoints_ = new double[numPoints_];
 
   QPalette palette;
-  palette.setColor(canvas()->backgroundRole(), QColor("white"));
+  palette.setColor(canvas()->backgroundRole(), QColor("black"));
   canvas()->setPalette(palette);
 
   setAxisScaleEngine(QwtPlot::xBottom, new QwtLinearScaleEngine);
@@ -43,7 +43,7 @@ Pointplot::Pointplot(QWidget *parent)
 
   curve_ = new QwtPlotCurve("Constellation Points");
   curve_->attach(this);
-  curve_->setPen(QPen(Qt::blue, 5, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+  curve_->setPen(QPen(Qt::green, 4, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
   curve_->setStyle(QwtPlotCurve::Dots);
   curve_->setRawSamples(realPoints_, imagPoints_, numPoints_);
 
