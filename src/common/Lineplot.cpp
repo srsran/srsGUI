@@ -40,11 +40,11 @@ Lineplot::Lineplot(QWidget *parent)
   setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding);
 
   QPalette palette;
-  palette.setColor(canvas()->backgroundRole(), QColor("white"));
+  palette.setColor(canvas()->backgroundRole(), QColor("black"));
   canvas()->setPalette(palette);
 
   curve_ = new QwtPlotCurve("Curve");
-  curve_->setPen(QPen(Qt::blue, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+  curve_->setPen(QPen(Qt::green, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
   curve_->setStyle(QwtPlotCurve::Lines);
   curve_->setRawSamples(indexPoints_, dataPoints_, numPoints_);
   curve_->setYAxis(QwtPlot::yLeft);
