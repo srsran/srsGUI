@@ -22,7 +22,7 @@ For instance in ubuntu you can run: ```sudo apt-get install libboost-system-dev 
 
 Finally, to download and build srsGUI, just run: 
 ```
-git clone https://github.com/suttonpd/srsgui.git
+git clone https://github.com/srsLTE/srsgui.git
 cd srsgui
 mkdir build
 cd build
