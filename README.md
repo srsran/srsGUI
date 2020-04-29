@@ -14,10 +14,10 @@ Current Features:
 Download & Install Instructions
 =================================
 
-Requirements: Boost (thread, unit_test_framework, system), QT4 and Qwt6
+Requirements: Boost (thread, unit_test_framework, system), QT5 and Qwt6
 
-To install Boost, QT4 and Qwt6, use your distribution packet management system.
-For instance in ubuntu you can run: ```sudo apt-get install libboost-system-dev libboost-test-dev libboost-thread-dev libqwt-dev libqt4-dev```
+To install Boost, QT5 and Qwt6, use your distribution packet management system.
+For instance in ubuntu you can run: ```sudo apt-get install libboost-system-dev libboost-test-dev libboost-thread-dev libqwt-qt5-dev qtbase5-dev```
 
 
 Finally, to download and build srsGUI, just run: 
