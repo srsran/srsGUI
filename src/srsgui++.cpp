@@ -42,6 +42,7 @@ void sdrgui_exit() {
   {
     usleep(100000);
     pthread_cancel(threadxx);
+    pthread_join(threadxx, NULL);
 	}
   sdrgui_initiatedxx=0;
 }
