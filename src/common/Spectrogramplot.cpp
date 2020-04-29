@@ -1,5 +1,3 @@
-#include <qprinter.h>
-#include <qprintdialog.h>
 #include <qwt_color_map.h>
 #include <qwt_plot_spectrogram.h>
 #include <qwt_scale_widget.h>

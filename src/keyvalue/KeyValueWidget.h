@@ -5,8 +5,8 @@
 #include <qwidget.h>
 #include <qframe.h>
 #include <complex>
-#include <QtGui/qplaintextedit.h>
-#include <QtGui/qlabel.h>
+#include <QtWidgets/qplaintextedit.h>
+#include <QtWidgets/qlabel.h>
 
 class KeyValueWidget
   : public QFrame

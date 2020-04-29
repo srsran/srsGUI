@@ -35,25 +35,13 @@
 
 SET(QWT_FOUND "NO")
 
-FIND_PATH(QWT_INCLUDE_DIR qwt.h
-  /usr/local/qwt/include
-  /usr/local/include
-  /usr/include/qwt6
-  /usr/include/qwt-qt4
-  /usr/include/qwt
-  /usr/include
-  /opt/local/include/qwt #macports path
-  $ENV{QWT_DIR}/include
-  $ENV{QWT_DIR}/src
-  $ENV{QWTDIR}/include
-  $ENV{QWTDIR}/src
-  $ENV{QWT_ROOT}/include
-  $ENV{QWT_ROOT}/src
-  $ENV{QWTROOT}/include
-  $ENV{QWTROOT}/src
+find_path ( QWT_INCLUDE_DIR
+  NAMES qwt_plot.h
+  HINTS ${QT_INCLUDE_DIR}
+  PATH_SUFFIXES qwt qwt-qt5 qwt6
 )
 
-SET(QWT_INCLUDE_DIRS ${QWT_INCLUDE_DIR})
+set ( QWT_INCLUDE_DIRS ${QWT_INCLUDE_DIR} )
 
 # version
 SET(_VERSION_FILE ${QWT_INCLUDE_DIR}/qwt_global.h)
@@ -85,7 +73,7 @@ ENDIF()
 SET(POTENTIAL_LIBRARY_PATHS /usr/local/qwt/lib /usr/local/lib /usr/lib /opt/local/lib
               $ENV{QWT_DIR}/lib $ENV{QWTDIR}/lib $ENV{QWT_ROOT}/lib $ENV{QWTROOT}/lib)
               
-SET(QWT_NAMES ${QWT_NAMES} qwt6 qwt-qt4 qwt )
+SET(QWT_NAMES ${QWT_NAMES} qwt-qt5)
 FIND_LIBRARY(QWT_LIBRARY
   NAMES ${QWT_NAMES}
   PATHS ${POTENTIAL_LIBRARY_PATHS}
