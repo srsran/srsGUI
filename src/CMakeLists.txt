@@ -37,8 +37,8 @@ IF(Qt5_FOUND AND QWT_FOUND AND QWT_MAJOR_VERSION EQUAL 6)
   QT5_WRAP_CPP(real realplot/RealWidget.h realplot/RealplotWrapper.h)
   QT5_WRAP_CPP(scatter scatterplot/ScatterWidget.h scatterplot/ScatterplotWrapper.h)
   QT5_WRAP_CPP(waterfall waterfallplot/WaterfallWidget.h waterfallplot/WaterfallplotWrapper.h)
-  QT5_WRAP_CPP(textedit textedit/TextEditWidget.h textedit/TextEditWrapper.h ../include/srsgui/plot/text_edit.h)
-  QT5_WRAP_CPP(keyvalue keyvalue/KeyValueWidget.h keyvalue/KeyValueWrapper.h ../include/srsgui/plot/key_value.h)
+  QT5_WRAP_CPP(textedit textedit/TextEditWidget.h textedit/TextEditWrapper.h)
+  QT5_WRAP_CPP(keyvalue keyvalue/KeyValueWidget.h keyvalue/KeyValueWrapper.h)
 
   INCLUDE_DIRECTORIES(common complexplot realplot scatterplot waterfallplot textedit keyvalue ${Boost_INCLUDE_DIRS})
   
