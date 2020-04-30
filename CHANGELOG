@@ -1,6 +1,9 @@
 Change Log for Releases
 =======================
 
+## 2.0
+  * Added Qt5 support
+
 ## 1.0
   * First official release
   * srsGUI based on Qt4
