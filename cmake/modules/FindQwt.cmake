@@ -73,7 +73,7 @@ ENDIF()
 SET(POTENTIAL_LIBRARY_PATHS /usr/local/qwt/lib /usr/local/lib /usr/lib /opt/local/lib
               $ENV{QWT_DIR}/lib $ENV{QWTDIR}/lib $ENV{QWT_ROOT}/lib $ENV{QWTROOT}/lib)
               
-SET(QWT_NAMES ${QWT_NAMES} qwt-qt5)
+SET(QWT_NAMES ${QWT_NAMES} qwt-qt5 qwt)
 FIND_LIBRARY(QWT_LIBRARY
   NAMES ${QWT_NAMES}
   PATHS ${POTENTIAL_LIBRARY_PATHS}
