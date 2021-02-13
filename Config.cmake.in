@@ -1,0 +1,7 @@
+@PACKAGE_INIT@
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+
+include("${CMAKE_CURRENT_LIST_DIR}/srsguiTargets.cmake")
+
+check_required_components(srsgui)

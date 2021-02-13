@@ -5,10 +5,7 @@
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 FIND_PACKAGE(Qwt)
-IF(Qt5_FOUND AND QWT_FOUND)
-    INCLUDE_DIRECTORIES(${QWT_INCLUDE_DIRS})
-ENDIF(Qt5_FOUND AND QWT_FOUND)
- 
+
 ########################################################################
 # Build the graphics library
 ########################################################################
@@ -40,11 +37,14 @@ IF(Qt5_FOUND AND QWT_FOUND AND QWT_MAJOR_VERSION EQUAL 6)
   QT5_WRAP_CPP(textedit textedit/TextEditWidget.h textedit/TextEditWrapper.h)
   QT5_WRAP_CPP(keyvalue keyvalue/KeyValueWidget.h keyvalue/KeyValueWrapper.h)
 
-  INCLUDE_DIRECTORIES(common complexplot realplot scatterplot waterfallplot textedit keyvalue ${Boost_INCLUDE_DIRS})
-  
   ADD_LIBRARY(srsgui SHARED ${eventwraps} ${lineplotwraps} ${pointplotwraps} ${spectrogramplotwraps} ${complex} ${real} ${scatter} ${waterfall} ${textedit} ${keyvalue} ${SOURCES_ALL} )
-  TARGET_LINK_LIBRARIES(srsgui pthread Qt5::Widgets ${QWT_LIBRARIES})
-  INSTALL(TARGETS srsgui DESTINATION ${LIBRARY_DIR})
+  INSTALL(TARGETS srsgui EXPORT "srsguiTargets" DESTINATION ${LIBRARY_DIR})
+
+  TARGET_LINK_LIBRARIES(srsgui PRIVATE pthread)
+  TARGET_LINK_LIBRARIES(srsgui PUBLIC Qt5::Widgets ${QWT_LIBRARIES})
+  TARGET_INCLUDE_DIRECTORIES("srsgui" PUBLIC ${QWT_INCLUDE_DIRS})
+  TARGET_INCLUDE_DIRECTORIES("srsgui" PRIVATE common complexplot realplot scatterplot waterfallplot textedit keyvalue ${Boost_INCLUDE_DIRS})
+
   SG_SET_PIC(srsgui)
 
   MESSAGE(STATUS "   srsGUI library will be installed.")
