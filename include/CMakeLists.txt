@@ -2,6 +2,7 @@
 # Install headers
 ########################################################################
 INSTALL(DIRECTORY srsgui
+        EXPORT "srsguiTargets"
         DESTINATION "${INCLUDE_DIR}"
         FILES_MATCHING PATTERN "*.h"
         PATTERN ".svn" EXCLUDE

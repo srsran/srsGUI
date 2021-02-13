@@ -28,7 +28,7 @@ ENDIF(${CMAKE_SOURCE_DIR} STREQUAL ${CMAKE_BINARY_DIR})
 ########################################################################
 # Project setup
 ########################################################################
-CMAKE_MINIMUM_REQUIRED (VERSION 2.6)
+CMAKE_MINIMUM_REQUIRED (VERSION 3.15)
 PROJECT (srsGUI)
 ENABLE_TESTING()
 LIST(APPEND CMAKE_MODULE_PATH "${PROJECT_SOURCE_DIR}/cmake/modules")
@@ -113,3 +113,18 @@ ENDMACRO(SG_SET_PIC)
 ADD_SUBDIRECTORY(include)
 ADD_SUBDIRECTORY(src)
 ADD_SUBDIRECTORY(test)
+
+
+########################################################################
+# Add the exports
+########################################################################
+include("CMakePackageConfigHelpers")
+install(EXPORT "srsguiTargets" FILE "srsguiTargets.cmake" NAMESPACE "srsgui::" DESTINATION "${LIBRARY_DIR}/cmake/srsgui")
+
+target_include_directories("srsgui" PUBLIC "$<INSTALL_INTERFACE:include>")
+
+write_basic_package_version_file("${CMAKE_CURRENT_BINARY_DIR}/srsguiConfigVersion.cmake" VERSION "2.0" COMPATIBILITY AnyNewerVersion)
+configure_package_config_file("${CMAKE_CURRENT_SOURCE_DIR}/Config.cmake.in" "${CMAKE_CURRENT_BINARY_DIR}/srsguiConfig.cmake" INSTALL_DESTINATION "${LIBRARY_DIR}/cmake/srsgui")
+
+install(FILES "${CMAKE_CURRENT_BINARY_DIR}/srsguiConfig.cmake" "${CMAKE_CURRENT_BINARY_DIR}/srsguiConfigVersion.cmake" DESTINATION "${LIBRARY_DIR}/cmake/srsgui")
+export(EXPORT "srsguiTargets" FILE "${CMAKE_CURRENT_BINARY_DIR}/cmake/srsguiTargets.cmake" NAMESPACE "srsgui::")
