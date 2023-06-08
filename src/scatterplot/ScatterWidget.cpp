@@ -1,4 +1,4 @@
-#include "ScatterWidget.h"
+#include "srsgui/widget/ScatterWidget.h"
 #include "srsgui/common/Pointplot.h"
 #include "srsgui/common/Events.h"
 

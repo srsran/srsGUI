@@ -8,6 +8,8 @@
 #include "srsgui/plot/TextEdit.h"
 #include "srsgui/plot/KeyValue.h"
 
+#include "srsgui/widget/ScatterWidget.h"
+
 int  sdrgui_init();
 int  sdrgui_init_title(const char *window_title);
 void sdrgui_exit();
