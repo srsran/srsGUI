@@ -39,6 +39,10 @@ KeyValueWrapper::KeyValueWrapper()
 
 KeyValueWrapper::~KeyValueWrapper()
 {
+  if(QCoreApplication::instance() == NULL) {
+    destroyed_ = true;
+  }
+
   if(destroyed_)
     emit destroyWidgetSignal();
   else

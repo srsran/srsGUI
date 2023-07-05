@@ -42,6 +42,10 @@ ScatterplotWrapper::ScatterplotWrapper()
 
 ScatterplotWrapper::~ScatterplotWrapper()
 {
+  if(QCoreApplication::instance() == NULL) {
+    destroyed_ = true;
+  }
+
   if(destroyed_)
     emit destroyWidgetSignal();
   else

@@ -39,6 +39,10 @@ WaterfallplotWrapper::WaterfallplotWrapper(int numDataPoints, int numRows)
 
 WaterfallplotWrapper::~WaterfallplotWrapper()
 {
+  if(QCoreApplication::instance() == NULL) {
+    destroyed_ = true;
+  }
+
   if(destroyed_)
     emit destroyWidgetSignal();
   else
