@@ -4,14 +4,16 @@
 #include <unistd.h>
 
 pthread_t threadxx;
+QApplication* appxx;
 static int sdrgui_initiatedxx=0;
 
 void *qt_threadxx(void *arg)
 {
   int argc = 1;
   char* argv[] = { const_cast<char *>((char*) arg), NULL };
-  QApplication app(argc, argv);
-  app.exec();
+  appxx = new QApplication(argc, argv);
+  appxx->exec();
+  delete appxx;
   pthread_exit(NULL);
 }
 
@@ -41,8 +43,11 @@ void sdrgui_exit() {
   if(sdrgui_initiatedxx)
   {
     usleep(100000);
-    pthread_cancel(threadxx);
+    if(appxx) {
+        appxx->quit();
+    }
+
     pthread_join(threadxx, NULL);
-	}
+  }
   sdrgui_initiatedxx=0;
 }
