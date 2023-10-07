@@ -4,7 +4,6 @@
 
 #include <boost/scoped_ptr.hpp>
 #include <boost/thread/thread.hpp>
-#include <boost/progress.hpp>
 #include <boost/bind.hpp>
 #include <cstdlib>
 #include <vector>
